@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> 门禁开启记录</h1>
+<table>
+    <tr>
+        <th>卡号</th>
+        <th>员工代码</th>
+        <th>设备编码</th>
+        <th>操作日期</th>
+        <th>操作时间</th>
+    </tr>
+    {%for line in open_list %}
+    <tr>
+        <td>{{ line.mark_no }}</td>
+        <td>{{ line.empl_code }}</td>
+        <td>{{ line.equ_id }}</td>
+        <td>{{ line.open_date }}</td>
+        <td>{{ line.open_time }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

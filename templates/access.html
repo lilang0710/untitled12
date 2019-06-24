@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> 信息展示</h1>
+<table>
+    <tr>
+        <th>部门编号</th>
+        <th>部门名字</th>
+        <th>部门种类</th>
+    </tr>
+    {%for line in people_list %}
+    <tr>
+        <td>{{ line.dept_code }}</td>
+        <td>{{ line.dept_name }}</td>
+        <td>{{ line.dept_type }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

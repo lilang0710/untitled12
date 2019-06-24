@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> 员工信息</h1>
+<table>
+    <tr>
+        <th>部门编码</th>
+        <th>设备编码</th>
+        <th>设备MAC</th>
+        <th>设备位置</th>
+    </tr>
+    {%for line in employee_list %}
+    <tr>
+        <td>{{ line.mark_no }}</td>
+        <td>{{ line.empl_code }}</td>
+        <td>{{ line.empl_name }}</td>
+        <td>{{ line.posi }}</td>
+        <td>{{ line.dept_code }}</td>
+        <td>{{ line.sex_code }}</td>
+        <td>{{ line.education }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
